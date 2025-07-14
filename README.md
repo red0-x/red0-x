@@ -4,7 +4,7 @@
 
 I code, gamble, play chess, look at stocks, and don't do much else. 
 
-My Site: [website]
+[Website]
 
    <p align="left">
       <a href="https://github.com/red0-x?tab=repositories&sort=stargazers">
@@ -40,4 +40,4 @@ My Site: [website]
 
 #
 
-[website]: https://www.google.com/search?q=I+don%27t+have+one
+[Website]: https://www.google.com/search?q=I+don%27t+have+one
