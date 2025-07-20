@@ -40,4 +40,4 @@ I code, gamble, play chess, look at stocks, and don't do much else.
 
 #
 
-[Website]: https://www.google.com/search?q=I+don%27t+have+one
+[Website]: https://red0xx.top
