@@ -1,10 +1,10 @@
-# ‼️ red0-x
+# ‼️ [@red0xx]
 
-**`Dumb Developer & Market Watcher`**
+**`Silly Dev & Market Watcher`**
 
-I code, gamble, play chess, look at stocks, and don't do much else. 
+I code, homelab, play chess, look at stocks, and don't do much else. 
 
-[Website]
+fyi: (most my repos private btw)
 
    <p align="left">
       <a href="https://github.com/red0-x?tab=repositories&sort=stargazers">
@@ -40,4 +40,4 @@ I code, gamble, play chess, look at stocks, and don't do much else.
 
 #
 
-[Website]: https://red0xx.top
+[@red0xx]: https://red0xx.top
