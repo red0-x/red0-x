@@ -37,7 +37,6 @@
 ### 📊 Stats
 
 ![red0-x's GitHub stats](https://github-readme-stats.vercel.app/api?username=red0-x&show_icons=true&theme=shadow_red)
-![GitHub Streak](https://streak-stats.demolab.com?user=red0-x&theme=shadow_red&border_radius=4.5)
 
 >Majority of my repos are private. 
 
