@@ -1,8 +1,8 @@
 # ‼️ [@red0xx]
 
-**`Silly Dev & Market Watcher`**
+**`Dev, Hobbiest, Music Prod, Homelabber, Linguist and More!`**
 
->I Enjoy Programming Random Projects that I will never touch again
+>I enjoy programming random projects that I will never touch again
 
    <p align="left">
       <a href="https://github.com/red0-x?tab=repositories&sort=stargazers">
