@@ -2,7 +2,7 @@
 
 **`Silly Dev & Market Watcher`**
 
->I code, homelab, play chess, look at stocks, and don't do much else. 
+>I Enjoy Programming Random Projects that I will never touch again
 
    <p align="left">
       <a href="https://github.com/red0-x?tab=repositories&sort=stargazers">
