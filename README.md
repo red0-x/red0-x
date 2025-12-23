@@ -1,4 +1,4 @@
-# ‼️ [@red0xx]
+# ‼️ red0-x @ [red0xx.top](https://red0xx.top)
 
 **`Dev, Hobbiest, Music Prod, Homelabber, Linguist and More!`**
 
