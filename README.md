@@ -1,9 +1,9 @@
 ## ‼️ red0-x @ [red0xx.top](https://red0xx.top)
 
-**`I am a Dev, Homelabber, Music Producer, Chart Watcher, Linguist and much more!`**
+I am a Dev, Homelabber, Music Producer, Chart Watcher, Linguist and much more!
  <img alt="pfp" align="left" width=70px height=70px title="red0-x pfp github" src="https://avatars.githubusercontent.com/u/83562024"/></a>
  
->I enjoy programming random projects that I will never touch again
+I enjoy programming random projects that I will never touch again
 
    <p align="left">
       <a href="https://github.com/red0-x?tab=repositories&sort=stargazers">
