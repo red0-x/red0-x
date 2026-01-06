@@ -35,9 +35,6 @@ I enjoy programming random projects that I will never touch again
 #
 
 
-### 📊 Stats
-
-![red0-x's GitHub stats](https://github-readme-stats.vercel.app/api?username=red0-x&show_icons=true&theme=shadow_red)
 
 most repos are private 🤫
 
