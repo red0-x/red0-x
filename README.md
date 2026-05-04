@@ -8,6 +8,8 @@ I enjoy programming random projects that I will never touch again
    <p align="left">
       <a href="https://github.com/red0-x?tab=repositories&sort=stargazers">
          <img alt="total stars" title="Total stars on GitHub" src="https://custom-icon-badges.demolab.com/github/stars/red0-x?color=000000&style=for-the-badge&labelColor=f44336&logo=star"/></a>
+      <img src="https://komarev.com/ghpvc/?username=red0-x&color=red&style=for-the-badge">
+
    </p>
 
 
