@@ -38,6 +38,4 @@ I enjoy programming random projects that I will never touch again
 
 
 
-most repos are private 🤫
-
 [@red0xx]: https://red0xx.top
