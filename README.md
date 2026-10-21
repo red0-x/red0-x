@@ -2,11 +2,11 @@
      Rebuild banner + section stickers: python3 scripts/build_assets.py -->
 
 <p align="center">
-  <a href="https://redox.cool/?r=gh"><img src="assets/banner.svg" width="100%" alt="red0-x: dev, homelabber, music producer, chart watcher, linguist"></a>
+  <a href="https://redox.wtf/?r=gh"><img src="assets/banner.svg" width="100%" alt="red0-x: dev, homelabber, music producer, chart watcher, linguist"></a>
 </p>
 
 <p align="center">
-  <a href="https://redox.cool/?r=gh"><img src="https://img.shields.io/badge/redox.cool-FAF7F2?style=for-the-badge&logo=vercel&logoColor=C4161F&labelColor=FAF7F2&color=FAF7F2" alt="redox.cool"></a>
+  <a href="https://redox.wtf/?r=gh"><img src="https://img.shields.io/badge/redox.wtf-FAF7F2?style=for-the-badge&logo=vercel&logoColor=C4161F&labelColor=FAF7F2&color=FAF7F2" alt="redox.wtf"></a>
   <a href="https://github.com/red0-x?tab=repositories"><img src="https://img.shields.io/github/stars/red0-x?affiliations=OWNER&style=for-the-badge&label=stars&logo=github&logoColor=FAF7F2&color=C4161F&labelColor=6E0B0F" alt="stars"></a>
   <a href="https://github.com/red0-x?tab=followers"><img src="https://img.shields.io/github/followers/red0-x?style=for-the-badge&logo=github&logoColor=FAF7F2&color=C4161F&labelColor=6E0B0F" alt="followers"></a>
   <img src="https://komarev.com/ghpvc/?username=red0-x&style=for-the-badge&color=C4161F&label=views" alt="profile views">
@@ -49,4 +49,4 @@ security research · embedded · occasional web · music when the code won't com
 </p>
 
 <p align="center"><sub>public page. nothing personal here. </sub></p>
-<p align="center"><a href="https://redox.cool/?r=gh"><img src="https://img.shields.io/badge/redox.cool-C4161F?style=for-the-badge&labelColor=6E0B0F" alt="redox.cool"></a></p>
+<p align="center"><a href="https://redox.wtf/?r=gh"><img src="https://img.shields.io/badge/redox.wtf-C4161F?style=for-the-badge&labelColor=6E0B0F" alt="redox.wtf"></a></p>

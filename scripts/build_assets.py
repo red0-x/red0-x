@@ -79,7 +79,7 @@ def sticker(x, y, w, h, rot, body, r=22, cut=8, fill=PAPER, shadow=8):
 def banner():
     W, H = 1200, 420
     handle = "red0-x"
-    mona_text = handle + "HELLOmynameis@.·" + "".join(ROLES) + "> _" + "projects I will never touch again" + "redox.cool"
+    mona_text = handle + "HELLOmynameis@.·" + "".join(ROLES) + "> _" + "projects I will never touch again" + "redox.wtf"
     mona_b64, mona = font("mona", mona_text, {"wght": 900, "wdth": 112.5})
     mono_b64, mono = font("mona", mona_text, {"wght": 600, "wdth": 75})
     hand_b64, _ = font("hand", "red0xx", {"wght": 700})
@@ -150,7 +150,7 @@ def banner():
 <rect width="{W}" height="{H}" rx="28" fill="{RED600}"/><rect width="{W}" height="{H}" rx="28" fill="url(#d)"/>
 <path d="M0 {H - 34}H{W}V{H - 28}a28 28 0 0 1-28 28H28a28 28 0 0 1-28-28z" fill="{RED900}"/>
 <text x="40" y="{H - 11}" font-family="S" font-size="16" fill="#fff" opacity=".72">security research · embedded · occasional web</text>
-<text x="{W - 40}" y="{H - 11}" text-anchor="end" font-family="S" font-size="16" fill="#fff" opacity=".72">redox.cool</text>
+<text x="{W - 40}" y="{H - 11}" text-anchor="end" font-family="S" font-size="16" fill="#fff" opacity=".72">redox.wtf</text>
 {sticker(70, 80, 200, 200, -3, f'<image href="data:image/png;base64,{av}" x="70" y="80" width="200" height="200" clip-path="url(#av)"/>', r=18, cut=10)}
 <g class="deep">{extrude(handle_el, 6, SHADOW)}</g>
 {extrude(handle_el, 1, SHADOW)}
