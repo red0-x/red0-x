@@ -17,6 +17,7 @@ AVATAR = pathlib.Path.home() / "Documents/GitHub/red0xx-web/public/stickers/avat
 
 RED900, RED700, RED600, RED500, RED300 = "#6E0B0F", "#B3141C", "#C4161F", "#E01E2C", "#F26B74"
 LOGO_RED, PAPER, INK, SHADOW, MANGO = "#E64949", "#FAF7F2", "#111111", "#190306", "#FFB000"
+INK_DIM = "#3A3A3A"
 
 FONTS = {
     "mona": "https://github.com/google/fonts/raw/main/ofl/monasans/MonaSans%5Bwdth,wght%5D.ttf",
@@ -207,10 +208,51 @@ def stack():
             f'<title>{names}</title>{"".join(out)}</svg>')
 
 
+def contributions():
+    """Contribution heatmap, same data the snake used. Actions is locked on this
+    account (billing), so this is generated locally instead of nightly."""
+    import json, subprocess
+    q = ('query{user(login:"red0-x"){contributionsCollection{contributionCalendar'
+         '{totalContributions weeks{contributionDays{date contributionCount weekday}}}}}}')
+    out = subprocess.run(["gh", "api", "graphql", "-f", f"query={q}"],
+                         capture_output=True, text=True, check=True).stdout
+    cal = json.loads(out)["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+    weeks, total = cal["weeks"], cal["totalContributions"]
+    ramp = ["#F1ECE4", "#FBE7E8", "#F26B74", "#E01E2C", "#B3141C", "#6E0B0F"]
+    cell, gap, pad, top = 12, 3, 20, 62
+    cols = len(weeks)
+    w = pad * 2 + cols * (cell + gap) - gap
+    h = pad + top + 7 * (cell + gap) - gap
+    f_b64, f = font("mona", "contributions in the last yearJanFebMarAprMayJunJulAugSepOctNovDec0123456789", {"wght": 700, "wdth": 100})
+    out_el = [f'<text x="{pad}" y="32" font-family="M" font-size="18" fill="{INK}">{total} contributions in the last year</text>']
+    seen = set()
+    for ci, wk in enumerate(weeks):
+        days = wk["contributionDays"]
+        for d in days:
+            x = pad + ci * (cell + gap)
+            y = top + d["weekday"] * (cell + gap)
+            n = d["contributionCount"]
+            lvl = 0 if n == 0 else min(5, 1 + (n > 1) + (n > 3) + (n > 6) + (n > 11))
+            out_el.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="3" fill="{ramp[lvl]}"/>')
+        m = days[0]["date"][5:7]
+        mon = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][int(m) - 1]
+        if mon not in seen and days[0]["date"][8:10] <= "07":
+            seen.add(mon)
+            out_el.append(f'<text x="{pad + ci * (cell + gap)}" y="{top - 8}" font-family="M" font-size="11" fill="{INK_DIM}">{mon}</text>')
+    W, H = w + 12, h + 12
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="contribution graph, {total} contributions in the last year">'
+            f'<title>contributions</title><style>{face("M", f_b64)}</style>'
+            f'<rect x="6" y="6" width="{w}" height="{h}" rx="16" fill="{SHADOW}"/>'
+            f'<rect width="{w}" height="{h}" rx="16" fill="#FFF"/>'
+            f'<rect x="6" y="6" width="{w - 12}" height="{h - 12}" rx="12" fill="{PAPER}"/>'
+            f'{"".join(out_el)}</svg>')
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     (OUT / "banner.svg").write_text(banner())
     (OUT / "stack-icons.svg").write_text(stack())
+    (OUT / "commits-graph.svg").write_text(contributions())
     for k, v in SECTIONS.items():
         (OUT / f"{k}.svg").write_text(label(k, v))
     for p in sorted(OUT.glob("*.svg")):

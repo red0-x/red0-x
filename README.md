@@ -9,7 +9,7 @@
   <a href="https://redox.wtf/?r=gh"><img src="https://img.shields.io/badge/redox.wtf-FAF7F2?style=for-the-badge&logo=vercel&logoColor=C4161F&labelColor=FAF7F2&color=FAF7F2" alt="redox.wtf"></a>
   <a href="https://github.com/red0-x?tab=repositories"><img src="https://img.shields.io/github/stars/red0-x?affiliations=OWNER&style=for-the-badge&label=stars&logo=github&logoColor=FAF7F2&color=C4161F&labelColor=6E0B0F" alt="stars"></a>
   <a href="https://github.com/red0-x?tab=followers"><img src="https://img.shields.io/github/followers/red0-x?style=for-the-badge&logo=github&logoColor=FAF7F2&color=C4161F&labelColor=6E0B0F" alt="followers"></a>
-  <img src="https://komarev.com/ghpvc/?username=red0-x&style=for-the-badge&color=C4161F&label=views" alt="profile views">
+  <img src="https://hits.sh/github.com/red0-x.svg?style=for-the-badge&label=views&color=C4161F&labelColor=6E0B0F" alt="profile views">
 </p>
 
 <img src="assets/about.svg" height="64" alt="about me">
@@ -36,7 +36,7 @@ security research · embedded · occasional web · music when the code won't com
 <img src="assets/commits.svg" height="64" alt="commits">
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/red0-x/red0-x/output/snake.svg" width="100%" alt="snake">
+  <img src="assets/commits-graph.svg" width="100%" alt="contribution graph, 847 contributions in the last year">
 </p>
 
 <img src="assets/projects.svg" height="64" alt="projects">
