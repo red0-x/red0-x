@@ -14,10 +14,10 @@
 
 <img src="assets/about.svg" height="64" alt="about me">
 
-I'm **red0xx**: dev, homelabber, music producer, chart watcher, linguist and much more.
-I enjoy programming random projects that I will never touch again.
-
-security research · embedded · occasional web · music when the code won't compile
+Hey, i'm red0xx. 
+homelabber, music producer, chart watcher, linguist and more
+I enjoy making broken circuit boards and slop and learning languages like spanish and mandarin
+I make many random projects that I will never touch again. 
 
 <img src="assets/stack.svg" height="64" alt="stack">
 
