@@ -78,24 +78,23 @@ def sticker(x, y, w, h, rot, body, r=22, cut=8, fill=PAPER, shadow=8):
 
 
 def banner():
-    W, H = 1200, 420
+    """Avatar + wordmark + typing role. Nothing else."""
     handle = "red0-x"
-    mona_text = handle + "HELLOmynameis@.·" + "".join(ROLES) + "> _" + "projects I will never touch again" + "redox.wtf"
+    mona_text = handle + "@.·" + "".join(ROLES) + "> _"
     mona_b64, mona = font("mona", mona_text, {"wght": 900, "wdth": 112.5})
     mono_b64, mono = font("mona", mona_text, {"wght": 600, "wdth": 75})
-    hand_b64, _ = font("hand", "red0xx", {"wght": 700})
 
     av = base64.b64encode(AVATAR.read_bytes()).decode()
-    big = 132
-    hx, hy = 330, 210
-    handle_el = f'<text x="{hx}" y="{hy}" font-family="M" font-size="{big}" letter-spacing="-4">{handle}</text>'
+    big, hx, hy = 118, 268, 158
+    handle_el = f'<text x="{hx}" y="{hy}" font-family="M" font-size="{big}" letter-spacing="-3">{handle}</text>'
+    H = 270
 
     # typing roles: each word gets a 3s slot in a 15s loop, revealed by a stepped clip
     n, slot = len(ROLES), 3
-    role_size = 34
+    role_size, role_x, role_y = 30, 290, 214
     role_css, role_els = [], []
     for i, role in enumerate(ROLES):
-        rw = width(mono, role, role_size) + 4
+        rw = width(mono, role, role_size) + 6
         a0 = i / n * 100
         a1 = a0 + 0.30 / n * 100  # typed by 30% of the slot
         a2 = a0 + 0.80 / n * 100
@@ -105,64 +104,35 @@ def banner():
             f"#c{i} rect{{transform-box:fill-box;transform-origin:left;animation:t{i} {n * slot}s steps({len(role)}) infinite}}"
         )
         role_els.append(
-            f'<clipPath id="c{i}"><rect x="402" y="232" width="{rw:.0f}" height="48"/></clipPath>'
-            f'<text clip-path="url(#c{i})" x="402" y="268" font-family="S" font-size="{role_size}" fill="#fff">{role}</text>'
+            f'<clipPath id="c{i}"><rect x="{role_x + 34}" y="{role_y - 30}" width="{rw:.0f}" height="42"/></clipPath>'
+            f'<text clip-path="url(#c{i})" x="{role_x + 34}" y="{role_y}" font-family="S" font-size="{role_size}" fill="#fff">{role}</text>'
         )
-    pill_w = 402 - 352 + max(width(mono, r, role_size) for r in ROLES) + 44
+    pill_w = 26 + max(width(mono, r, role_size) for r in ROLES) + 30
+    W = max(hx + width(mona, handle, big), role_x + pill_w) + 44
 
     css = (
-        face("M", mona_b64) + face("S", mono_b64) + face("PM", hand_b64)
+        face("M", mona_b64) + face("S", mono_b64)
         + "@keyframes pop{0%,70%,100%{transform:translate(0,0)}78%,92%{transform:translate(-5px,-5px)}}"
         + "@keyframes deep{0%,70%,100%{opacity:0}78%,92%{opacity:1}}"
         + ".face{animation:pop 4s cubic-bezier(.3,1.6,.5,1) infinite}.deep{animation:deep 4s cubic-bezier(.3,1.6,.5,1) infinite}"
-        + "@keyframes wob{0%,100%{transform:rotate(4deg)}50%{transform:rotate(1.5deg)}}"
-        + ".tag{transform-box:fill-box;transform-origin:50% 0;animation:wob 5s ease-in-out infinite}"
-        + "@keyframes draw{0%{stroke-dashoffset:900;fill-opacity:0}55%{stroke-dashoffset:0;fill-opacity:0}70%,90%{fill-opacity:1;stroke-dashoffset:0}100%{fill-opacity:1}}"
-        + f".sig{{stroke:{INK};stroke-width:1.2;stroke-dasharray:900;animation:draw 6s ease-in-out infinite}}"
-        + "@keyframes bob{0%,100%{transform:rotate(-7deg) translateY(0)}50%{transform:rotate(-5deg) translateY(-4px)}}"
-        + ".mango{transform-box:fill-box;transform-origin:center;animation:bob 3.2s ease-in-out infinite}"
         + "@media (prefers-reduced-motion:reduce){*{animation:none!important}"
         + ",".join(f"#c{i} rect" for i in range(1, len(ROLES))) + "{transform:scaleX(0)}}"
         + "".join(role_css)
     )
 
-    tag_x, tag_y, tag_w, tag_h = 905, 70, 240, 170
-    nametag = (
-        f'<g class="tag">' + sticker(tag_x, tag_y, tag_w, tag_h, 0,
-            f'<path d="M{tag_x} {tag_y + 22}a22 22 0 0 1 22-22h{tag_w - 44}a22 22 0 0 1 22 22v40h-{tag_w}z" fill="{RED500}"/>'
-            f'<text x="{tag_x + tag_w / 2}" y="{tag_y + 38}" text-anchor="middle" font-family="M" font-size="30" fill="#fff" letter-spacing="2">HELLO</text>'
-            f'<text x="{tag_x + tag_w / 2}" y="{tag_y + 56}" text-anchor="middle" font-family="S" font-size="15" fill="#fff">my name is</text>'
-            f'<text class="sig" x="{tag_x + tag_w / 2}" y="{tag_y + 135}" text-anchor="middle" font-family="PM" font-size="72" fill="{INK}">red0xx</text>',
-            r=18) + "</g>"
-    )
-
-    mango_txt = "projects I will never touch again"
-    mango_w = width(mono, mango_txt, 20) + 36
-    mango = (
-        f'<g class="mango">' + sticker(820, 318, mango_w, 44, 0,
-            f'<text x="{820 + 18}" y="{318 + 29}" font-family="S" font-size="20" fill="{INK}">{mango_txt}</text>',
-            r=22, cut=6, fill=MANGO, shadow=6) + "</g>"
-    )
-
-    dots = f'<pattern id="d" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#fff" opacity=".09"/></pattern>'
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="red0-x: {', '.join(ROLES)}">
+    dots = '<pattern id="d" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#fff" opacity=".09"/></pattern>'
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="red0-x: {", ".join(ROLES)}">
 <title>red0-x</title><style>{css}</style>
-<defs>{dots}<clipPath id="av"><rect x="70" y="80" width="200" height="200" rx="18"/></clipPath></defs>
-<rect width="{W}" height="{H}" rx="28" fill="{RED600}"/><rect width="{W}" height="{H}" rx="28" fill="url(#d)"/>
-<path d="M0 {H - 34}H{W}V{H - 28}a28 28 0 0 1-28 28H28a28 28 0 0 1-28-28z" fill="{RED900}"/>
-<text x="40" y="{H - 11}" font-family="S" font-size="16" fill="#fff" opacity=".72">security research · embedded · occasional web</text>
-<text x="{W - 40}" y="{H - 11}" text-anchor="end" font-family="S" font-size="16" fill="#fff" opacity=".72">redox.wtf</text>
-{sticker(70, 80, 200, 200, -3, f'<image href="data:image/png;base64,{av}" x="70" y="80" width="200" height="200" clip-path="url(#av)"/>', r=18, cut=10)}
+<defs>{dots}<clipPath id="av"><rect x="44" y="56" width="160" height="160" rx="16"/></clipPath></defs>
+<rect width="{W}" height="{H}" rx="26" fill="{RED600}"/><rect width="{W}" height="{H}" rx="26" fill="url(#d)"/>
+{sticker(44, 56, 160, 160, -3, f'<image href="data:image/png;base64,{av}" x="44" y="56" width="160" height="160" clip-path="url(#av)"/>', r=16, cut=8)}
 <g class="deep">{extrude(handle_el, 6, SHADOW)}</g>
 {extrude(handle_el, 1, SHADOW)}
 <g class="face" fill="#fff">{handle_el}</g>
-<rect x="352" y="{hy + 24}" width="{pill_w:.0f}" height="50" rx="12" fill="{RED900}"/>
-<text x="372" y="268" font-family="S" font-size="{role_size}" fill="{RED300}">&gt;</text>
+<rect x="{role_x}" y="{role_y - 32}" width="{pill_w:.0f}" height="48" rx="12" fill="{RED900}"/>
+<text x="{role_x + 14}" y="{role_y}" font-family="S" font-size="{role_size}" fill="{RED300}">&gt;</text>
 {"".join(role_els)}
-{nametag}
-{mango}
 </svg>'''
-    return svg
 
 
 def label(key, text):

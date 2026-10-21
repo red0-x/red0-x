@@ -2,7 +2,7 @@
      Rebuild banner + section stickers: python3 scripts/build_assets.py -->
 
 <p align="center">
-  <a href="https://redox.wtf/?r=gh"><img src="assets/banner.svg" width="100%" alt="red0-x: dev, homelabber, music producer, chart watcher, linguist"></a>
+  <a href="https://redox.wtf/?r=gh"><img src="assets/banner.svg" width="100%" alt="red0-x"></a>
 </p>
 
 <p align="center">
