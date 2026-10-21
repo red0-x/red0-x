@@ -17,17 +17,11 @@
 I'm **red0xx**: dev, homelabber, music producer, chart watcher, linguist and much more.
 I enjoy programming random projects that I will never touch again.
 
-- 🔴 &nbsp;security research, embedded, occasional web
-- 🎛️ &nbsp;making music when the code won't compile
-- 📈 &nbsp;watching charts I built myself ([cppRedChart](https://github.com/red0-x/cppRedChart))
-- 🈶 &nbsp;learning languages, human and otherwise ([GoOrange](https://github.com/red0-x/GoOrange))
+security research · embedded · occasional web · music when the code won't compile
 
 <img src="assets/stack.svg" height="64" alt="stack">
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,nodejs,bun,electron,html,css&perline=10" alt="web stack"><br>
-  <img src="https://skillicons.dev/icons?i=python,cpp,go,redis,docker,linux,arch,git,vercel,ableton&perline=10" alt="systems and tools">
-</p>
+<p align="center"><img src="assets/stack-icons.svg" width="100%" alt="TypeScript, JavaScript, React, Next.js, Tailwind, Node, Bun, Electron, HTML, CSS, Python, C++, Go, Redis, Docker, Linux, Arch, Git, Vercel, Ableton"></p>
 
 <img src="assets/stats.svg" height="64" alt="stats">
 
@@ -42,7 +36,7 @@ I enjoy programming random projects that I will never touch again.
 <img src="assets/commits.svg" height="64" alt="commits">
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/red0-x/red0-x/output/snake.svg" width="100%" alt="contribution graph eaten by a snake">
+  <img src="https://raw.githubusercontent.com/red0-x/red0-x/output/snake.svg" width="100%" alt="snake">
 </p>
 
 <img src="assets/projects.svg" height="64" alt="projects">
@@ -54,4 +48,5 @@ I enjoy programming random projects that I will never touch again.
   <a href="https://github.com/red0-x/GoOrange"><img src="https://github-readme-stats.vercel.app/api/pin/?username=red0-x&repo=GoOrange&description_lines_count=2&hide_border=true&border_radius=22&bg_color=FAF7F2&title_color=C4161F&text_color=111111&icon_color=C4161F" alt="GoOrange"></a>
 </p>
 
-<p align="center"><sub>public page. nothing personal here. &nbsp;·&nbsp; <a href="https://redox.cool/?r=gh">redox.cool</a></sub></p>
+<p align="center"><sub>public page. nothing personal here. </sub></p>
+<p align="center"><a href="https://redox.cool/?r=gh"><img src="https://img.shields.io/badge/redox.cool-C4161F?style=for-the-badge&labelColor=6E0B0F" alt="redox.cool"></a></p>

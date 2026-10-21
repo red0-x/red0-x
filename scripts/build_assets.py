@@ -20,8 +20,14 @@ LOGO_RED, PAPER, INK, SHADOW, MANGO = "#E64949", "#FAF7F2", "#111111", "#190306"
 
 FONTS = {
     "mona": "https://github.com/google/fonts/raw/main/ofl/monasans/MonaSans%5Bwdth,wght%5D.ttf",
-    "marker": "https://github.com/google/fonts/raw/main/apache/permanentmarker/PermanentMarker-Regular.ttf",
+    "hand": "https://github.com/google/fonts/raw/main/ofl/caveat/Caveat%5Bwght%5D.ttf",
 }
+# simpleicons slugs, recoloured red. Ableton isn't on simpleicons, drawn by hand below.
+STACK = [
+    ["typescript", "javascript", "react", "nextdotjs", "tailwindcss", "nodedotjs", "bun", "electron", "html5", "css"],
+    ["python", "cplusplus", "go", "redis", "docker", "linux", "archlinux", "git", "vercel", "ableton"],
+]
+ABLETON = '<path d="M2 4h2v16H2zM6 4h2v16H6zM10 4h2v16h-2zM14 4h2v16h-2zM18 6h4v2h-4zM18 10h4v2h-4zM18 14h4v2h-4zM18 18h4v2h-4z"/>'
 ROLES = ["dev", "homelabber", "music producer", "chart watcher", "linguist"]
 SECTIONS = {"about": "about me", "stack": "stack", "stats": "stats", "commits": "commits", "projects": "projects"}
 
@@ -76,7 +82,7 @@ def banner():
     mona_text = handle + "HELLOmynameis@.·" + "".join(ROLES) + "> _" + "projects I will never touch again" + "redox.cool"
     mona_b64, mona = font("mona", mona_text, {"wght": 900, "wdth": 112.5})
     mono_b64, mono = font("mona", mona_text, {"wght": 600, "wdth": 75})
-    marker_b64, _ = font("marker", "red0xx")
+    hand_b64, _ = font("hand", "red0xx", {"wght": 700})
 
     av = base64.b64encode(AVATAR.read_bytes()).decode()
     big = 132
@@ -104,14 +110,14 @@ def banner():
     pill_w = 402 - 352 + max(width(mono, r, role_size) for r in ROLES) + 44
 
     css = (
-        face("M", mona_b64) + face("S", mono_b64) + face("PM", marker_b64)
+        face("M", mona_b64) + face("S", mono_b64) + face("PM", hand_b64)
         + "@keyframes pop{0%,70%,100%{transform:translate(0,0)}78%,92%{transform:translate(-5px,-5px)}}"
         + "@keyframes deep{0%,70%,100%{opacity:0}78%,92%{opacity:1}}"
         + ".face{animation:pop 4s cubic-bezier(.3,1.6,.5,1) infinite}.deep{animation:deep 4s cubic-bezier(.3,1.6,.5,1) infinite}"
         + "@keyframes wob{0%,100%{transform:rotate(4deg)}50%{transform:rotate(1.5deg)}}"
         + ".tag{transform-box:fill-box;transform-origin:50% 0;animation:wob 5s ease-in-out infinite}"
         + "@keyframes draw{0%{stroke-dashoffset:900;fill-opacity:0}55%{stroke-dashoffset:0;fill-opacity:0}70%,90%{fill-opacity:1;stroke-dashoffset:0}100%{fill-opacity:1}}"
-        + f".sig{{stroke:{INK};stroke-width:1.6;stroke-dasharray:900;animation:draw 6s ease-in-out infinite}}"
+        + f".sig{{stroke:{INK};stroke-width:1.2;stroke-dasharray:900;animation:draw 6s ease-in-out infinite}}"
         + "@keyframes bob{0%,100%{transform:rotate(-7deg) translateY(0)}50%{transform:rotate(-5deg) translateY(-4px)}}"
         + ".mango{transform-box:fill-box;transform-origin:center;animation:bob 3.2s ease-in-out infinite}"
         + "@media (prefers-reduced-motion:reduce){*{animation:none!important}"
@@ -125,7 +131,7 @@ def banner():
             f'<path d="M{tag_x} {tag_y + 22}a22 22 0 0 1 22-22h{tag_w - 44}a22 22 0 0 1 22 22v40h-{tag_w}z" fill="{RED500}"/>'
             f'<text x="{tag_x + tag_w / 2}" y="{tag_y + 38}" text-anchor="middle" font-family="M" font-size="30" fill="#fff" letter-spacing="2">HELLO</text>'
             f'<text x="{tag_x + tag_w / 2}" y="{tag_y + 56}" text-anchor="middle" font-family="S" font-size="15" fill="#fff">my name is</text>'
-            f'<text class="sig" x="{tag_x + tag_w / 2}" y="{tag_y + 135}" text-anchor="middle" font-family="PM" font-size="52" fill="{INK}">red0xx</text>',
+            f'<text class="sig" x="{tag_x + tag_w / 2}" y="{tag_y + 135}" text-anchor="middle" font-family="PM" font-size="72" fill="{INK}">red0xx</text>',
             r=18) + "</g>"
     )
 
@@ -174,9 +180,37 @@ def label(key, text):
     return svg
 
 
+def icon(slug):
+    if slug == "ableton":
+        return ABLETON
+    req = urllib.request.Request(f"https://cdn.simpleicons.org/{slug}", headers={"User-Agent": "curl/8"})
+    svg = urllib.request.urlopen(req).read().decode()
+    return svg[svg.index("<path"):svg.rindex("</svg>")]
+
+
+def stack():
+    tile, gap, pad = 64, 22, 18
+    cols = max(len(r) for r in STACK)
+    W = pad * 2 + cols * tile + (cols - 1) * gap + 6
+    H = pad * 2 + len(STACK) * tile + (len(STACK) - 1) * gap + 6
+    rots = [-3, 2, -1.5, 4, -2, 1]
+    out = []
+    for ri, row in enumerate(STACK):
+        x0 = (W - (len(row) * tile + (len(row) - 1) * gap)) / 2
+        for ci, slug in enumerate(row):
+            x, y = x0 + ci * (tile + gap), pad + ri * (tile + gap)
+            s = (tile - 28) / 24
+            glyph = f'<g transform="translate({x + 14} {y + 14}) scale({s:.3f})" fill="{RED600}">{icon(slug)}</g>'
+            out.append(sticker(x, y, tile, tile, rots[(ri * 3 + ci) % len(rots)], glyph, r=14, cut=4, shadow=5))
+    names = ", ".join(s for r in STACK for s in r)
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W:.0f} {H:.0f}" width="{W:.0f}" height="{H:.0f}" role="img" aria-label="{names}">'
+            f'<title>{names}</title>{"".join(out)}</svg>')
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     (OUT / "banner.svg").write_text(banner())
+    (OUT / "stack-icons.svg").write_text(stack())
     for k, v in SECTIONS.items():
         (OUT / f"{k}.svg").write_text(label(k, v))
     for p in sorted(OUT.glob("*.svg")):
