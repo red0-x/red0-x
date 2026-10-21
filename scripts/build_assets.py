@@ -218,11 +218,54 @@ def contributions():
             f'{"".join(out_el)}</svg>')
 
 
+def top_langs(count=8):
+    """Most-used-languages card, drawn here so the dots follow one cream
+    brightness ramp instead of GitHub's per-language colours."""
+    import json, subprocess
+    repos = json.loads(subprocess.run(
+        ["gh", "api", "users/red0-x/repos?per_page=100&type=owner", "--paginate"],
+        capture_output=True, text=True, check=True).stdout)
+    totals = {}
+    for r in repos:
+        if r["fork"]:
+            continue
+        langs = json.loads(subprocess.run(
+            ["gh", "api", f"repos/red0-x/{r['name']}/languages"],
+            capture_output=True, text=True, check=True).stdout)
+        for k, v in langs.items():
+            totals[k] = totals.get(k, 0) + v
+    top = sorted(totals.items(), key=lambda kv: -kv[1])[:count]
+    grand = sum(totals.values())
+
+    f_b64, _ = font("mona", "Most Used Languages" + "".join(k for k, _ in top) + "0123456789.%", {"wght": 700, "wdth": 100})
+    W, pad, title_y, bar_y, rows_y = 440, 24, 36, 54, 92
+    rows = (len(top) + 1) // 2
+    H = rows_y + rows * 28 + 8
+    inner = W - pad * 2
+    ramp = [1.0, 0.9, 0.78, 0.68, 0.58, 0.5, 0.42, 0.36][:len(top)]
+    out = [f'<text x="{pad}" y="{title_y}" font-family="M" font-size="18" fill="{PAPER}">Most Used Languages</text>']
+
+    x = pad
+    for (name, n), op in zip(top, ramp):
+        seg = inner * n / grand
+        out.append(f'<rect x="{x:.1f}" y="{bar_y}" width="{seg:.1f}" height="8" fill="{PAPER}" opacity="{op}"/>')
+        x += seg
+    for i, ((name, n), op) in enumerate(zip(top, ramp)):
+        cx = pad + (i % 2) * (inner / 2 + 8)
+        cy = rows_y + (i // 2) * 28
+        out.append(f'<circle cx="{cx + 5}" cy="{cy - 4}" r="5" fill="{PAPER}" opacity="{op}"/>')
+        out.append(f'<text x="{cx + 17}" y="{cy}" font-family="M" font-size="13" fill="{PAPER}" opacity="{max(op, .72)}">{name} {n / grand * 100:.2f}%</text>')
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="most used languages">'
+            f'<title>Most Used Languages</title><style>{face("M", f_b64)}</style>'
+            f'<rect width="{W}" height="{H}" rx="22" fill="{RED600}"/>{"".join(out)}</svg>')
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     (OUT / "banner.svg").write_text(banner())
     (OUT / "stack-icons.svg").write_text(stack())
     (OUT / "commits-graph.svg").write_text(contributions())
+    (OUT / "top-langs.svg").write_text(top_langs())
     for k, v in SECTIONS.items():
         (OUT / f"{k}.svg").write_text(label(k, v))
     for p in sorted(OUT.glob("*.svg")):

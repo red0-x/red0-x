@@ -27,7 +27,7 @@ I make many random projects that I will never touch again.
 
 <p align="center">
   <img height="170" src="https://github-readme-stats.vercel.app/api?username=red0-x&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&hide_border=true&border_radius=22&bg_color=C4161F&title_color=FAF7F2&text_color=FAF7F2&icon_color=FAF7F2&ring_color=FAF7F2" alt="github stats">
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=red0-x&layout=compact&langs_count=8&hide_border=true&border_radius=22&bg_color=C4161F&title_color=FAF7F2&text_color=FAF7F2" alt="top languages">
+  <img height="170" src="assets/top-langs.svg" alt="most used languages">
 </p>
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=red0-x&hide_border=true&border_radius=22&background=C4161F&stroke=FAF7F2&ring=FAF7F2&fire=FAF7F2&currStreakNum=FAF7F2&sideNums=FAF7F2&currStreakLabel=FAF7F2&sideLabels=F26B74&dates=F26B74" alt="commit streak">
