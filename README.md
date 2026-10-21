@@ -48,5 +48,5 @@ I make many random projects that I will never touch again.
   <a href="https://github.com/red0-x/GoOrange"><img src="https://github-readme-stats.vercel.app/api/pin/?username=red0-x&repo=GoOrange&description_lines_count=2&hide_border=true&border_radius=22&bg_color=FAF7F2&title_color=C4161F&text_color=111111&icon_color=C4161F" alt="GoOrange"></a>
 </p>
 
-<p align="center"><sub>public page. nothing personal here. </sub></p>
+<p align="center"><sub>one of my sites lol</sub></p>
 <p align="center"><a href="https://redox.wtf/?r=gh"><img src="https://img.shields.io/badge/redox.wtf-C4161F?style=for-the-badge&labelColor=6E0B0F" alt="redox.wtf"></a></p>
