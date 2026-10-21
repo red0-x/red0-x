@@ -1,43 +1,57 @@
-# ‼️ [@red0xx]
+<!-- red0-x profile. Style: red0xx v2 sticker system (red field, paper stickers, hard #190306 shadows).
+     Rebuild banner + section stickers: python3 scripts/build_assets.py -->
 
-**`Silly Dev & Market Watcher`**
+<p align="center">
+  <a href="https://redox.cool/?r=gh"><img src="assets/banner.svg" width="100%" alt="red0-x: dev, homelabber, music producer, chart watcher, linguist"></a>
+</p>
 
->I code, homelab, play chess, look at stocks, and don't do much else. 
+<p align="center">
+  <a href="https://redox.cool/?r=gh"><img src="https://img.shields.io/badge/redox.cool-FAF7F2?style=for-the-badge&logo=vercel&logoColor=C4161F&labelColor=FAF7F2&color=FAF7F2" alt="redox.cool"></a>
+  <a href="https://github.com/red0-x?tab=repositories"><img src="https://img.shields.io/github/stars/red0-x?affiliations=OWNER&style=for-the-badge&label=stars&logo=github&logoColor=FAF7F2&color=C4161F&labelColor=6E0B0F" alt="stars"></a>
+  <a href="https://github.com/red0-x?tab=followers"><img src="https://img.shields.io/github/followers/red0-x?style=for-the-badge&logo=github&logoColor=FAF7F2&color=C4161F&labelColor=6E0B0F" alt="followers"></a>
+  <img src="https://komarev.com/ghpvc/?username=red0-x&style=for-the-badge&color=C4161F&label=views" alt="profile views">
+</p>
 
-   <p align="left">
-      <a href="https://github.com/red0-x?tab=repositories&sort=stargazers">
-         <img alt="total stars" title="Total stars on GitHub" src="https://custom-icon-badges.demolab.com/github/stars/red0-x?color=000000&style=for-the-badge&labelColor=f44336&logo=star"/></a>
-   </p>
+<img src="assets/about.svg" height="64" alt="about me">
 
+I'm **red0xx**: dev, homelabber, music producer, chart watcher, linguist and much more.
+I enjoy programming random projects that I will never touch again.
 
----
+- 🔴 &nbsp;security research, embedded, occasional web
+- 🎛️ &nbsp;making music when the code won't compile
+- 📈 &nbsp;watching charts I built myself ([cppRedChart](https://github.com/red0-x/cppRedChart))
+- 🈶 &nbsp;learning languages, human and otherwise ([GoOrange](https://github.com/red0-x/GoOrange))
 
-### 🧰 Languages and Tools
-<br> 
-<img align="left" alt="TypeScript" width="30px" style="padding-right:10px; filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(6622%) hue-rotate(356deg) brightness(97%) contrast(118%);" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
-<img align="left" alt="Git" width="30px" style="padding-right:10px; filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(6622%) hue-rotate(356deg) brightness(97%) contrast(118%);" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-<img align="left" alt="Linux" width="30px" style="padding-right:10px; filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(6622%) hue-rotate(356deg) brightness(97%) contrast(118%);" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
-<img align="left" alt="HTML" width="30px" style="padding-right:10px; filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(6622%) hue-rotate(356deg) brightness(97%) contrast(118%);" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" />
-<img align="left" alt="CSS" width="30px" style="padding-right:10px; filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(6622%) hue-rotate(356deg) brightness(97%) contrast(118%);" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" />
-<img align="left" alt="JavaScript" width="30px" style="padding-right:10px; filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(6622%) hue-rotate(356deg) brightness(97%) contrast(118%);" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
-<img align="left" alt="React" width="30px" style="padding-right:10px; filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(6622%) hue-rotate(356deg) brightness(97%) contrast(118%);" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-<img align="left" alt="NodeJS" width="30px" style="padding-right:10px; filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(6622%) hue-rotate(356deg) brightness(97%) contrast(118%);" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-<img align="left" alt="Python" width="30px" style="padding-right:10px; filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(6622%) hue-rotate(356deg) brightness(97%) contrast(118%);" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg" />
-<img align="left" alt="C++" width="30px" style="padding-right:10px; filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(6622%) hue-rotate(356deg) brightness(97%) contrast(118%);" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-plain.svg" />
-<img align="left" alt="GitHub" width="30px" style="padding-right:10px; filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(6622%) hue-rotate(356deg) brightness(97%) contrast(118%);" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-<img align="left" alt="Bash" width="30px" style="padding-right:10px; filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(6622%) hue-rotate(356deg) brightness(97%) contrast(118%);" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" />
+<img src="assets/stack.svg" height="64" alt="stack">
 
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,nodejs,bun,electron,html,css&perline=10" alt="web stack"><br>
+  <img src="https://skillicons.dev/icons?i=python,cpp,go,redis,docker,linux,arch,git,vercel,ableton&perline=10" alt="systems and tools">
+</p>
 
-<br />
-<br />
+<img src="assets/stats.svg" height="64" alt="stats">
 
-#
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=red0-x&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&hide_border=true&border_radius=22&bg_color=C4161F&title_color=FAF7F2&text_color=FAF7F2&icon_color=FFB000&ring_color=FAF7F2" alt="github stats">
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=red0-x&layout=compact&langs_count=8&hide_border=true&border_radius=22&bg_color=C4161F&title_color=FAF7F2&text_color=FAF7F2" alt="top languages">
+</p>
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=red0-x&hide_border=true&border_radius=22&background=6E0B0F&stroke=FAF7F2&ring=FFB000&fire=FFB000&currStreakNum=FAF7F2&sideNums=FAF7F2&currStreakLabel=FFB000&sideLabels=F26B74&dates=F26B74" alt="commit streak">
+</p>
 
+<img src="assets/commits.svg" height="64" alt="commits">
 
-### 📊 Stats
+<p align="center">
+  <img src="https://raw.githubusercontent.com/red0-x/red0-x/output/snake.svg" width="100%" alt="contribution graph eaten by a snake">
+</p>
 
-![red0-x's GitHub stats](https://github-readme-stats.vercel.app/api?username=red0-x&show_icons=true&theme=shadow_red)
+<img src="assets/projects.svg" height="64" alt="projects">
 
->Majority of my repos are private. 
+<p align="center">
+  <a href="https://github.com/red0-x/cppRedChart"><img src="https://github-readme-stats.vercel.app/api/pin/?username=red0-x&repo=cppRedChart&description_lines_count=2&hide_border=true&border_radius=22&bg_color=FAF7F2&title_color=C4161F&text_color=111111&icon_color=C4161F" alt="cppRedChart"></a>
+  <a href="https://github.com/red0-x/hubert"><img src="https://github-readme-stats.vercel.app/api/pin/?username=red0-x&repo=hubert&description_lines_count=2&hide_border=true&border_radius=22&bg_color=FAF7F2&title_color=C4161F&text_color=111111&icon_color=C4161F" alt="hubert"></a>
+  <a href="https://github.com/red0-x/Crackable"><img src="https://github-readme-stats.vercel.app/api/pin/?username=red0-x&repo=Crackable&description_lines_count=2&hide_border=true&border_radius=22&bg_color=FAF7F2&title_color=C4161F&text_color=111111&icon_color=C4161F" alt="Crackable"></a>
+  <a href="https://github.com/red0-x/GoOrange"><img src="https://github-readme-stats.vercel.app/api/pin/?username=red0-x&repo=GoOrange&description_lines_count=2&hide_border=true&border_radius=22&bg_color=FAF7F2&title_color=C4161F&text_color=111111&icon_color=C4161F" alt="GoOrange"></a>
+</p>
 
-[@red0xx]: https://red0xx.top
+<p align="center"><sub>public page. nothing personal here. &nbsp;·&nbsp; <a href="https://redox.cool/?r=gh">redox.cool</a></sub></p>
